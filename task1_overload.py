@@ -5,7 +5,7 @@ class A:
     def overload_method(self, arg1):
         print("class A")
 
-class B:
+class B(A):
     def overload_method(self, arg1, arg2, arg3):
         print("class B")
 
