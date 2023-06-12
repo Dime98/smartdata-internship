@@ -130,13 +130,13 @@ teacher1 = Teachers("Dan", "Clinton", "biology", 12346789, "555-1212" ,35, 15)
 
 # change protected field
 # print(teacher1.__social_number) # this line would give an error because __social_number is private
-print("\nchangeing private variable __social_number within class using change_social_number()")
+print("\nchanging private variable __social_number within class using change_social_number()")
 print(teacher1.__dict__)
 teacher1.change_social_number(98765432)
 print(teacher1.__dict__)
 
 # partially private var
-print("\nchangeing partially private variable _phone_number")
+print("\nchanging partially private variable _phone_number")
 print(teacher1._phone_number)
 teacher1._phone_number = "444-1212"
 print(teacher1._phone_number)
