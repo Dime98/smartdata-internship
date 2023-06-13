@@ -1,4 +1,4 @@
-# .gitignore
-# xtra
+.gitignore
+xtra
 # .ipynb_checkpoints
 # # *.py
