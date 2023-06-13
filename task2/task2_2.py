@@ -10,7 +10,7 @@ def check_numbers(nr1, nr2):
 		return True
 	else: return False
 
-nr1 = 29
-nr2 = 1
+nr1 = 15
+nr2 = 15
 
 print(check_numbers(nr1, nr2))

@@ -1,9 +1,9 @@
 # 16. Given an array of positive integers, find the smallest subarray's length whose sum of 
 # elements is greater than a given number k.
 
-arr = [1,10,2,8,3,12]
+arr = [1, 10, 2, 8, 3, 12]
 
-k = 15
+k = 18
 
 grater_than_k = []
 for i in range(len(arr)):
@@ -14,10 +14,13 @@ for i in range(len(arr)):
 			grater_than_k.append(arr[i:x])
 		x += 1
 
+print()
+print(grater_than_k)
+
 # get the length of each subarray grater than k
 lengths = [len(i) for i in grater_than_k]
 shortest_len = min(lengths)
 print(grater_than_k[lengths.index(shortest_len)])
-# print()
+
 # for i in grater_than_k:
 # 	print(i, sum(i), len(i))

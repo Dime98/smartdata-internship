@@ -42,7 +42,9 @@ for i in sentence_to_encode:
     else: encoded += i
 
 encoded = encoded.replace("\n", "")
+print(sentence_to_encode)
 print(encoded)
+print()
 
 decoded = ""
 sentence_to_decode = "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD"
@@ -50,4 +52,5 @@ for i in sentence_to_decode:
     if i in dictionary.values():
         decoded += get_keys_by_value(dictionary, i)[0]
     else: decoded += i
+print(sentence_to_decode)
 print(decoded)

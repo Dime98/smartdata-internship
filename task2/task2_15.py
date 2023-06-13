@@ -26,6 +26,7 @@ def longest_continuous_subarray(arr):
     return arr[start_index:end_index+1]
 
 print(longest_continuous_subarray(indx))
+print(f"replace 0 at position {longest_continuous_subarray(indx)[0]-1}")
 
 # dictionary = {}
 # for i in range(len(indx)):

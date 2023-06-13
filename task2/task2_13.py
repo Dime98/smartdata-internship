@@ -18,16 +18,16 @@ lst = [0]
 added_sorted = []
 for i in file_arr:
     added_sorted.append(i+max(lst))
-    print()
-    print(f"i     {i}")
-    print(f"max   {max(lst)}")
-    print(f"i+max {i+max(lst)}")
+    # print()
+    # print(f"i     {i}")
+    # print(f"max   {max(lst)}")
+    # print(f"i+max {i+max(lst)}")
     lst.append(i+max(lst))
-    print(f"lst   {lst}")
+    # print(f"lst   {lst}")
 
-print()
+# print()
 for i in added_sorted:
-    print(i)
-#     with open('13_numbers.txt', 'a') as f:
-#         context = str(i) + "\n"
-#         f.write(context)
+    # print(i)
+    with open('13_numbers.txt', 'a') as f:
+        context = str(i) + "\n"
+        f.write(context)
