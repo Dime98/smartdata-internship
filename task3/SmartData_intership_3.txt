@@ -1,0 +1,97 @@
+### SmartData intership ###
+
+## Task nr. 3 ##
+
+It's a new day, meaning it's the right time for a new task (or reviewing the older ones^^)!
+First of all, let's have some tips for ex. 28 from the previous task and trying to do it 
+again.
+
+## Tips for Task nr. 2 ##
+- Try to create a class that express the nodes in your binary tree (you should have the 
+current value, the left and right neighbours);
+- Try to make a function that checks either the node is equal to the sum of its children
+(it is likely to be recursive)
+
+In terms of today's task, let us discuss about some libraries that are necessary in data 
+science and machine learning. Maybe you have heard about them earlier and you've already
+guessed what it is about. Today's topic is about NumPy and Pandas libraries!
+
+## Resources ##
+- https://medium.com/nerd-for-tech/a-complete-guide-on-numpy-for-data-science-c54f47dfef8d
+- https://www.learndatasci.com/tutorials/applied-introduction-to-numpy-python-tutorial/
+- https://medium.com/velotio-perspectives/a-quick-introduction-to-data-analysis-with-pandas-42b6e0cad260
+- https://www.kdnuggets.com/2020/06/introduction-pandas-data-science.html
+
+## Tasks for introduction to NumPy and Pandas ##
+
+1. Import numpy as np and print the version number.
+
+2. Combine ser1 and ser2 to form a dataframe. You are free to choose the values for ser1
+and ser2.
+
+3. Create a 3x3 numpy array of all True's.
+
+4. Give a name to the series ser calling it with your favourite movie/book/series/cartoon 
+character.
+
+5. Populate ser1 and ser2 with random numbers. From ser1 remove items present in ser2. 
+
+6. Create a 3x3 numpy array and initiate it with zeros.
+
+7. Populate a ser with random numbers. Compute the minimum, 25th percentile, median, 75th, 
+and maximum of ser.
+
+8. Create an array of size 4x4 with random numbers. Transform it into a numpy array.
+
+9. Create and initialize an array of size 4x4 with random numbers. Replace all odd numbers in arr with -1.
+
+10. Create a ser and populate it with random numbers. Convert the series ser into a dataframe with its index 
+as another column on the dataframe.
+
+11. Create two arrays a and b and initialize them with random numbers. Stack them vertically. 
+Then, try to create another array, stacking arrays a and b horizontally.(take care of their size).
+
+12. Create ser1 and ser2 and populate them with random numbers. Combine ser1 and ser2 to 
+form a dataframe.
+
+13. Import every 50th row of BostonHousing dataset as a dataframe.
+Link to the dataset: https://raw.githubusercontent.com/selva86/datasets/master/BostonHousing.csv
+
+14. Convert the 1D iris to 2D array iris_2d (you choose the size of rows) by omitting 
+the species text field. 
+Input:
+url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+iris_1d = np.genfromtxt(url, delimiter=',', dtype=None)
+
+15. Create a normalized form of iris's sepallength whose values range exactly between 0 and 
+1 so that the minimum has value 0 and maximum has value 1.
+Input:
+url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+sepallength = np.genfromtxt(url, delimiter=',', dtype='float', usecols=[0])
+
+16. Import again the boston housing dataset, but while importing change the 'medv' 
+(median house value) column so that values < 25 becomes 'Low' and > 25 becomes 'High'.
+
+17. Filter the rows of iris_2d that has petallength (3rd column) > 1.5 and sepallength 
+(1st column) < 5.0.
+Input:
+url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+iris_2d = np.genfromtxt(url, delimiter=',', dtype='float', usecols=[0,1,2,3])
+
+18. Create a dataframe with rows as strides from a given series.
+
+19. Select the rows of iris_2d that does not have any nan value.
+Input:
+url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+iris_2d = np.genfromtxt(url, delimiter=',', dtype='float', usecols=[0,1,2,3])
+
+20. In df, use apply method to replace the missing values in Min.Price with the column's 
+mean and those in Max.Price with the column's median.
+Input:
+df = pd.read_csv('https://raw.githubusercontent.com/selva86/datasets/master/Cars93_miss.csv')
+
+## Additional ##
+-- Question: When will I receive feedback for the Task nr. 2? --
+>> Answer: Most probably tomorrow.
+-- Question: When and where can I address questions regarding my studying process and the given tasks?
+>> Answer: Anytime via Telegram (for quicker answers), e-mail or live.
