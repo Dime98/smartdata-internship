@@ -3,10 +3,12 @@
 # integers are within the range, the program returns false.
 
 def check_number(nr, range_low, range_high):
-	if 20 <= nr <= 50:
+	if range_low <= nr <= range_high:
 		return True
 	else:
 		return False
 
-nr = 50
-print(check_number(nr, 20, 50))
+nr = input("nr >> ")
+low_range = input("low_range >>  ")
+high_range = input("high_range >> ")
+print(check_number(nr, low_range, high_range))

@@ -15,16 +15,23 @@ def arr_to_str(arr):
 arr = [3,12,1,2,3,4,1,2]
 check_seq = [1,2,3]
 
-# convert array to string
-str_arr = arr_to_str(arr)
-# print(str_arr)
+# # convert array to string
+# str_arr = arr_to_str(arr)
+# # print(str_arr)
 
-check_seq_str = arr_to_str(check_seq)
-# print(check_seq_str)
+# check_seq_str = arr_to_str(check_seq)
+# # print(check_seq_str)
 
-# check for sequence
-seq_index = str_arr.find(check_seq_str)
-if seq_index == -1:
-	print(f"{check_seq} not found")
-else:
-	print(f"{check_seq} sequence found @ index[{seq_index}:{seq_index+len(check_seq)}]")
+# # check for sequence
+# seq_index = str_arr.find(check_seq_str)
+# if seq_index == -1:
+# 	print(f"{check_seq} not found")
+# else:
+# 	print(f"{check_seq} sequence found @ index[{seq_index}:{seq_index+len(check_seq)}]")
+
+check_seq_len = len(check_seq)
+for i in range(len(arr) - check_seq_len + 1):
+	if arr[i:i+check_seq_len] == check_seq:
+		print(f"{check_seq} sequence found @ index[{i}]")
+
+

@@ -7,21 +7,36 @@
 # Output: false
 # Explanation: No duplicate () is found
 
-def dup_check(inp, dictionary):
-    ret = False
-    for k, v in dictionary.items():
-        if inp.find(k) >= 0 and inp.find(v) >= 0 :
-            print(f"duplicates found: {k} {v}")
-            return True
-        else: return False
-inp = "((x+y))+z"
+import collections
 
-dictionary = {
-    "((" : "))",
-    "[[" : "]]",
-}
 
-dup_check(inp, dictionary)
+def dup_check(inp, parenthesis):
+    ret = {}
+    for i in parenthesis.keys():
+        # dubs = [count for item, count in collections.Counter(inp).items()]
+        inv_i = parenthesis[i]
+        tmp = f"{i}{inv_i}" # to return open and close parenthesis, prettier outpt
+        if i in inp:
+            if inp.count(i) != inp.count(inv_i):
+                ret[tmp] = False 
+            else:
+                ret[tmp] = True
+        else:
+            ret[tmp] = None
+    return ret
+
+inp = "(((x+y))+[z]"
+
+parenthesis = {
+        "(" : ")" , 
+        "[" : "]" , 
+        "{" : "}" , 
+    }
+
+print(inp)
+print()
+print(dup_check(inp, parenthesis))
+
 
 
 

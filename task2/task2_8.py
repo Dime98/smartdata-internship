@@ -13,4 +13,8 @@ games_student2 = set(("game3", "game2", "game7", "game8"))
 # print(type(games_student1))
 # print(type(games_student2))
 
-print(get_intersection(games_student1, games_student2))
+# print(get_intersection(games_student1, games_student2))
+
+
+similar_games = [i for i in games_student1 if i in games_student2]
+print(similar_games)
