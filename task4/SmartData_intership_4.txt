@@ -1,0 +1,46 @@
+### SmartData intership ###
+
+## Task nr. 4 ##
+
+Hello! Hope you interested in previous tasks as it aimed to form and develop you baisic 
+skills!
+In terms of today's assignment, it will be more exciting (at least in my opinion and hope
+you will agree with me), as it requires work on a real dataset. We will start with ones of 
+the most popular (and legendary) datasets. We are talking about  "Iris Species" datase from 
+Kaggle (https://www.kaggle.com/datasets/uciml/iris). To perform this task, you will need to
+apply the skills gathered in the previous days.
+
+## Tasks for basic dataset analysis ##
+1. Go to the Kagle dataset page (https://www.kaggle.com/datasets/uciml/iris) and download
+the specified dataset.
+
+2. Create a Jupyter Notebook file.
+
+3. Import the dataset as a dataframe.
+
+4. Get some simple statistical information about the dataset (using describe()).
+
+5. Output the first 5 rows from the dataset to study its structure.
+
+6. Get the general information of the dataset fields, such as the number of non-null values
+and the type of data (one function).
+
+7. Display first ten entities with the value of "Species" set to "setoasa".
+
+8. Display last ten entities with the value of "Species" set to "versicolor".
+
+9. Create a NumPy array with entities of spice "Virginica".
+
+10. Display the percentage of each spice in the dataset.
+
+11. Determine which Spice, on average, has the larger value of "Sepal.Length".
+
+12. Determine which Spice, on average, has the lowest value of "Petal.Width".
+
+13. Plot the average value of each spice "Sepal.Width" in one schema.
+
+14. Compare Petal Length and Petal Width of each spice using a graph (plot the values 
+with individual color for each color, where x axis is "Petal.Length" and y axis is 
+"Petal.Width").
+
+15. Extract only enteties with Petal.Length greater than the average Petal.Length.
