@@ -1,0 +1,91 @@
+### SmartData intership ###
+
+## Task nr. 5 ##
+
+Hi! What a wonderfuuul day, right? Also add the fact that it's Friday ( :) )! It means 
+it's already a week since your intership has started!!
+Long story short. Today is a day to study one of the most powerful tools a data scientist 
+can operate with: MATPLOTLIB. Why is it so? Because it is crucial in this job to have a 
+graphical and visual representation of whatever we try to analyze. Of course, numbers are
+good, but colourful plots are better!
+
+## Resources ##
+- https://www.simplilearn.com/tutorials/python-tutorial/matplotlib
+- https://www.kaggle.com/code/prashant111/matplotlib-tutorial-for-beginners
+- https://matplotlib.org/cheatsheets/handout-beginner.pdf
+
+## Tasks for introduction to MATPLOTLIB ##
+(please do them in a Jupyter Notebook file with outputs shown)
+
+1. Write a program to plot two or more lines with legends, different widths, styles
+and colors.
+
+2. Write a program to plot several lines with different format styles in one 
+command using numpy arrays.
+
+3.  Write a program to display the grid and draw line charts of the closing value 
+of Alphabet Inc. between October 3, 2016 to October 7, 2016. Customized the grid lines 
+with linestyle -, width .5. and color blue.
+Data:
+Date,Close
+03-10-16,772.559998
+04-10-16,776.429993
+05-10-16,776.469971
+06-10-16,776.859985
+07-10-16,775.080017
+
+4. Keep the graphic obtained in the previous exercise. Customized the grid lines with 
+rendering with a larger grid (major grid) and a smaller grid (minor grid).Turn on the 
+grid but turn off ticks.
+
+5. Create multiple plots, such that your output has two rows: one plot in the first row and
+four plots in the second one.
+
+6. Write a program to display a bar chart of the popularity of programming 
+Languages.
+Data:
+Programming languages: Java, Python, PHP, JavaScript, C#, C++
+Popularity: 22.2, 17.6, 8.8, 8, 7.7, 6.7
+
+7. Keep the program and data from the previous exercise. Change your program such that
+the bars in the plot are placed horizontally.
+
+8. Keep the data and the program from the previous exercise. Perform it in such a way
+that there is grid on the background and specify the position for each bar plot. specify
+the wifth of each bar.
+
+9. Write a program to create bar plot of scores by group and gender. Use multiple X 
+values on the same chart for men and women.
+Data:
+Sample Data:
+Means (men) = (22, 30, 35, 35, 26)
+Means (women) = (25, 32, 30, 35, 29)
+
+10. Write a program to add textures (black and white) to bars and wedges. Use the 
+data from previous exercise.
+
+11. Write a program to create a pie chart of gold medal achievements of five most 
+successful countries in 2016 Summer Olympics.
+Data:
+country,gold_medal
+United States,46
+Great Britain,27
+China,26
+Russia,19
+Germany,17
+
+12. Write a program to draw a scatter graph taking a random distribution in 
+X and Y (200 values) and plotted against each other. Personalize the scetter plot by adding shape, 
+dimenssion and color.
+
+13. Write a program to represent the Poisson Probability for n values of X in range [0; 100].
+
+14. Plot mean and standard deviation of the given dataset.
+Dataset:
+df = pd.DataFrame({
+    'insert': [0.0, 0.1, 0.3, 0.5, 1.0],
+    'mean': [0.009905, 0.45019, 0.376818, 0.801856, 0.643859],
+    'quality': ['good', 'good', 'poor', 'good', 'poor'],
+    'std': [0.003662, 0.281895, 0.306806, 0.243288, 0.322378]})
+
+15. Do ex 15 from Task nr. 4.
