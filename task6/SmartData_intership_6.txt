@@ -36,6 +36,7 @@ fill_value=0.
 7. Download and import "reparo library" (pip install reparo)
 
 8. Create an instance of the CDI from reparo.
+
 9. Create an instance of the FRNNI from reparo.
 
 10. Create an instance of the HotDeckImputation from reparo.

@@ -1,0 +1,43 @@
+import pandas as pd
+import numpy as np
+from matplotlib import pyplot as plt
+
+df = pd.read_csv("HousingData.csv")
+# df = pd.read_csv("housing.csv",delim_whitespace=True)
+
+all_cols = df.columns
+data = []
+for i in all_cols:
+    print(df[i].size)
+    data = df[i]
+
+print()
+for i in data:
+    print(i, type(i))
+print(len(data))
+data = np.array(data)
+print(data, type(data))
+
+
+X = df["CRIM"].to_numpy()
+y = df["AGE"].to_numpy()
+
+x1 = X[:]
+
+
+x1 = X[:]
+
+nan_nr = []
+for i in x1:
+    print(i, np.isnan(i))
+    if np.isnan(i):
+        nan_nr.append(i)
+
+# x1.isna().sum()
+print()
+print( np.count_nonzero(~np.isnan(x1)) )
+print( np.sum(~np.isnan(x1)) )
+print( np.count_nonzero(np.isnan(x1)) )
+print( len(nan_nr) )
+print( len(x1) )
+print()
