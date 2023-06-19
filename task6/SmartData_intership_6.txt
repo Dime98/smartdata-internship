@@ -1,0 +1,56 @@
+### SmartData intership ###
+
+## Task nr. 6 ##
+
+Hi! How are you? Hope you like the intership here and discover something new for you!
+So, today's topic will cover an important aspect in data science:the presence of missing 
+values, in other words of parameters that have no data. Why do we need this? Sometimes
+the absence of data (especially if there is a lot of data missing) may misslead the 
+general view on the data and the conclusions we may extract from there.
+
+## Resources ##
+
+- https://medium.com/geekculture/how-to-deal-with-missing-values-in-machine-learning-98e47f025b9c
+- https://towardsdatascience.com/whats-the-best-way-to-handle-nan-values-62d50f738fc
+- https://www.kaggle.com/general/248836
+- https://machinelearningmastery.com/statistical-imputation-for-missing-values-in-machine-learning/
+- https://scikit-learn.org/stable/modules/generated/sklearn.impute.SimpleImputer.html#sklearn.impute.SimpleImputer
+- https://pypi.org/project/reparo/
+
+## Tasks for dealing with null values ##
+1. Create a Jupyter Notebook file.
+
+2. Import the Boston House Prices dataset as Pandas dataframe:
+https://www.kaggle.com/datasets/vikrishnan/boston-house-prices
+
+3. Create a bar plot to show the number of missing values in each column.
+
+4. Create an instance of SimpleImputer
+
+5. Try different startegies of imputation of missing values of SimpleImputer instance to
+deal with missing values. Show the result for each of them.
+
+6. Create an instance of the SimpleImputer with the strategy set as constant and the 
+fill_value=0.
+
+7. Download and import "reparo library" (pip install reparo)
+
+8. Create an instance of the CDI from reparo.
+9. Create an instance of the FRNNI from reparo.
+
+10. Create an instance of the HotDeckImputation from reparo.
+
+11. Create an instance of the KNNImputer from reparo.
+
+12. Create an instance of the PMM from reparo.
+
+13. Create an instance of the SICE from reparo.
+
+14. Create an instance of the MICE from reparo.
+
+15. Train every imputer data set.
+
+16. Choose the best imputer method (in your opinion) to do the final dataset with each
+missing value filled.
+
+17. Make conclusions on the results you got. 
