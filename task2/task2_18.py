@@ -4,14 +4,30 @@
 def get_keys_by_value(dict_obj, value):
     return [k for k, v in dict_obj.items() if v == value]
 
-denominations = [.01, .05, .10, .50]
+denominations = [1, 5, 10, 50]
 
-change = 20
+change = 47
+denominations.sort(reverse=True)
 
-min_nr = {}
+coin_sum = []
 for i in denominations:
-	min_nr[i] = int(change/i)
+	print()
+	print(f"coin 	{i}")
+	print(f"change  {change}")
+	print(f"coins   {coin_sum}")
+	if i > change:
+		continue
+	else:
+		print("\t",int(change/i))
+		temp = int(change/i)
+		temp_sum  = []
+		for x in range(temp):
+			# coin_sum.append(int(change/i))
+			temp_sum.append(i)
+			coin_sum.append(i)
+			print("\t\t x   	", x)
+			print("\t\t sum 	",sum(coin_sum))
+		change = change - sum(temp_sum)
 
-shortest_len = min(min_nr.values())
-print(f"{get_keys_by_value(min_nr, shortest_len)[0]} minimum number of \
-coins required to get {change} change ")
+print(f"coins {coin_sum} \
+	\ncoin_sum {sum(coin_sum)}")
