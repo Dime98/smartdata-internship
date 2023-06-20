@@ -1,0 +1,54 @@
+### SmartData intership ###
+
+## Task nr. 7 ##
+
+Hello! Hope you are great and yet in forces to continue your training process during this
+intership! Can you guess what today's topic is going to be about? 
+So, long story short: have you ever faced situations when, providing some data, there
+are some instance that are considerably different from others? But... can it be a 
+problem? Of course it can! Imagine the situation when you are trying to predict the mean 
+value of a column where most of the values are between 0 and 10 and only two of them are 
+greater than 1000. What will happen in this case?
+So, today's topic is about outlier detection.
+
+## Resources ##
+
+- https://towardsdatascience.com/anomaly-detection-cheat-sheet-5502fc4f6bea
+- https://towardsdatascience.com/5-ways-to-detect-outliers-that-every-data-scientist-should-know-python-code-70a54335a623
+- https://www.seldon.io/outlier-detection-and-analysis-methods
+- https://www.freecodecamp.org/news/how-to-detect-outliers-in-machine-learning/
+- https://www.kdnuggets.com/2023/05/beginner-guide-anomaly-detection-techniques-data-science.html
+
+## Tasks for outliers detection ##
+
+1. Create a Jupyter Notebook file.
+
+2. Import the Pokemon Classification dataset as Pandas dataframe:
+https://www.kaggle.com/datasets/abcsds/pokemon.
+
+3. Analyze the data set by viewing info about it, types of data number of missing values, 
+and so on.
+
+4. Prepare the dataset (For example, handle the NAN values).
+
+5. Find the columns that have the greatest correlation with the target column (TOP 7) and
+create a smaller dataset including only these columns and the target one.
+
+6. Plot some semnificative data tha you consider relevant to be shown (at least 3). Defend
+your choice.
+
+7. Make some conclusions based on the plots.
+
+8. Identify the number of outliers on the whole dataset (without the target column), using
+different algorithms (at least 3).
+
+9. For each outlier detection algorithm, plot a graphic and make some conclusions.
+
+10. Modify the contamination value for each algorithm, plot thegraph of dependence of the
+outliers number on it and make some cocnclusions.
+
+11. Try to come up with some methods of outliers removing. Test your guesses and make some
+relevant conclusions.
+
+. Create a table that shows thenumber of outliers in dependence of the used algorithm. Try to
+identify the most accurate one in your opinion.
