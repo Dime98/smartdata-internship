@@ -1,0 +1,18 @@
+### SmartData intership ###
+
+## Task nr. 7 ##
+
+Hi! Today it's time for you to test your skills you developed until now. You are going to 
+to analyze the proposed dataset however you want and consider to be correct.
+
+## Tasks for dataset analysis ##
+
+1. Import the Red Wine quality dataset as Pandas dataframe: 
+https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009
+
+2. Analyze the dataset.
+
+3. Make the statistical analysis of the given dataset (based on the whole dataset or 
+specific columns).
+
+4. Make some business conclusions the observations from previous tasks.
