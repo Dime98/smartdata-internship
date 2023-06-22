@@ -34,21 +34,31 @@ and so on.
 5. Find the columns that have the greatest correlation with the target column (TOP 7) and
 create a smaller dataset including only these columns and the target one.
 
-6. Plot some semnificative data tha you consider relevant to be shown (at least 3). Defend
+6. Plot some semnificative data that you consider relevant to be shown (at least 3). Defend
 your choice.
+>> I plotted correlation between Total and [Sp. Atk, Attack, Sp. Def, HP]
 
 7. Make some conclusions based on the plots.
+>> plots have strong correlation [0.74, 0.73, 0.71, 0.61], almost linear
 
 8. Identify the number of outliers on the whole dataset (without the target column), using
 different algorithms (at least 3).
 
 9. For each outlier detection algorithm, plot a graphic and make some conclusions.
+>> interquartile range method finds more outliest than statistical outlier detection.
+is ok if the data has homogenous behviour
+but sometimes anomaly happens so in that case there should be a separate use case
 
-10. Modify the contamination value for each algorithm, plot thegraph of dependence of the
+10. Modify the contamination value for each algorithm, plot the graph of dependence of the
 outliers number on it and make some cocnclusions.
+>> used IsolationForest (sklearn) for this
+looks the best if in plt.scatter() color arg = predictions, outliers would have a different color
 
 11. Try to come up with some methods of outliers removing. Test your guesses and make some
 relevant conclusions.
+>> here I store outliers in a list and loop through it
+used df.drop() to remove outliest
+every time I run the cell list outliers gets lower and eventually empty
 
-. Create a table that shows thenumber of outliers in dependence of the used algorithm. Try to
+. Create a table that shows the number of outliers in dependence of the used algorithm. Try to
 identify the most accurate one in your opinion.
