@@ -16,3 +16,31 @@ https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009
 specific columns).
 
 4. Make some business conclusions the observations from previous tasks.
+
+>> 1st thing I did after importing csv I printed head() and describe() to get familiar with dataset.
+
+Right after that, I looped through the columns and printed the sum of nan values, fortunately there were none.
+
+I did run outliers method.
+There were some numbers of outliers but for some column it was ok, like alcohol column outliers method got 14 and 15% as outlier but is not an abnormal value in real world.
+This is also available for some other columns, I looked up the range of values for some components and they are variable so I guess that the outliers are not an anomaly.
+
+Then I got the correlation for each element to alcohol and quality. (HeatMap of entire data set was done the next)
+I run correlation of alcohol and quality separately out of curiosity and noticed that wines of higher quality can have more alcohol than the of lower quality.
+This is especially visible with wines of quality 3 where maximum alcohol values is lower than mean value of wines of quality 7 and 8.
+
+I also plotted the top 2 components that affect the alcohol precentage which are 'pH' and 'citric acid' with correlations of 0.20 and 0.1, not linear correlations but the strongest positive one. Contrary to this, the components with negative correlation are chlorides (-0.22) and density (-0.49), followed by total sulfur dioxide, volatile acidity and free sulfur dioxide.
+I did the same thing for quality so the components with positive correlation are:
+	'alcohol': 0.47
+	'sulphates': 0.25
+	'citric acid': 0.22
+	'fixed acidity': 0.12
+The following 2 components have the most negative correlation to quality:
+	'total sulfur dioxide': -0.18
+	'volatile acidity': -0.39
+
+Next thing I did is grouped the data by quality to further get the components that contribute the most to quality. Plotted data for the wines with quality equals to 8 and for those with quality grater than 5. Resulst are pretty simillar.
+
+Got all the columns with acidicy normalized and added to a numpy array and then added it all to a new column in dataframe. Don't know if is correct to do it like this or if it makes any sanse to do it in at all, did it for practice.
+
+I also deleted the columns that have the most negative correlation to quality, namely [chlorides, density, total sulfur dioxide, volatile acidity]
