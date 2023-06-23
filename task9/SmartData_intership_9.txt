@@ -1,0 +1,58 @@
+### SmartData intership ###
+
+## Task nr. 9 ##
+
+Hi! How is it going? hope you were really interested and involved into the process of 
+fully analyzing a dataset, given in the previous task! For today, you will continue your
+work on an individual dataset. 
+As a data scientist, you should be able analyze not only the given dataset itself, but
+the probem described there itself and come with a business solution.
+As your work for the previous task was pretty accurate, today we will extend the dataset
+described there and will come with a new one, that combines red and white wine quality.
+
+## Tasks for dataset analysis from business perspective ##
+1. Import the Red Wine quality dataset as Pandas dataframe: 
+https://www.kaggle.com/datasets/ruthgn/wine-quality-data-set-red-white-wine
+2. Analyze the dataset.
+3. Make the statistical analysis of the given dataset (based on the whole dataset or 
+specific columns) and explicitly describe your decisions.
+4. Answer to the questions what columns impact the target column the most? Why is it
+happening?
+5. Come up with a business proposal for the owners of the company that provided data
+(find link to their site in dataset description)such that they increse their wine sales.
+Why did you come up with that specific decision? Based on the analyzed data, what influenced 
+your decision?
+
+>>
+separated white wine from red wine to analyze them separately.
+	separated with df.value_counts().loc["red"] but while working on other cells 
+	noticed that the number of elements was not corresponding to original dataFrame, 
+	sorted_df.get_group("red") gave proper result
+		raw_df.value_counts():
+			white    4898
+			red      1599
+
+		sorted_df.value_counts().loc["white"].size)
+		sorted_df.value_counts().loc["red"].size)
+			white size   3961
+			red size     1359
+	even if the size is different the values for quality.mean() and alcohol.max()/mean() are the same
+
+plotted correlation heatmap for each type of wine to visually identify correlation.
+made a method to plot heatmap so that I'd use dry principle
+'free sulfur dioxide' and 'total sulfur dioxide' have the highest positive correlation for both types of wine
+
+plotted wine mean quality and and alcohol.
+	white wine is leading with slightly better quality score 5.85 vs 5.62
+	however there are significantly more entries for white wine 4898 vs 1599.
+	highest alcohol values has the red wine 14.9, max aclohol for white is 14.2.
+
+while getting correlation of 'alcohol' and components noticed that the top element with highest value 
+is the same for both red and white, the component is 'pH'. correlation is pretty weak though .12 for both wines.
+also 'sulphates' is the 3rd top element that infuluence alcohol for both types of wine but the correlation is near 0.
+
+for 'quality' correlation, both wines have 'alcohol' as the top element, and 'sulphates' are in top 3.
+
+just like in previous task, I got mean values for components that make the best quality wine.
+made plot for white, red wine and for the whole dataset.
+had to take max quality and subtract 1 because there's no red wine with quality 9.
