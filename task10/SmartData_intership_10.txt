@@ -1,0 +1,82 @@
+### SmartData intership ###
+
+## Task nr. 10 ##
+
+Hello! How are you? Hopw you had a lovely weekend and now you are ready for new challanges
+towards data science learning.
+So, today you will take a closer look to a very important term for the analyze part in 
+data science: correlation.
+
+## Resources ##
+
+- https://www.analyticsvidhya.com/blog/2021/04/intuition-behind-correlation-definition-and-its-types/
+- https://www.analyticsvidhya.com/blog/2021/09/different-type-of-correlation-metrics-used-by-data-scientist/
+- https://towardsdatascience.com/data-correlation-can-make-or-break-your-machine-learning-project-82ee11039cc9
+- https://www.simplilearn.com/tutorials/statistics-tutorial/what-is-correlation-in-statistics
+- https://www.w3schools.com/datascience/ds_stat_correlation.asp
+
+## Tasks for training correlation concept ##
+1. Import the House Sales in King County, USA dataset as Pandas dataframe: 
+https://www.kaggle.com/datasets/harlfoxem/housesalesprediction
+2. Analyze the dataset
+3. Make some preliminarily conclusions on the analyzed data.
+4. Output the correlations between columns.
+5. Analyze more in details the correlation between some selected columns that seem to carry
+some valuable information.
+6. Analyze the difference between corelation and cause-effect relationship and note the 
+columns for both categories.
+7. Make some modifications you consider to be suitable
+8. Come up with some concluions (over the data set,in general, and/or business proposals, etc.)
+
+>>
+deleted 'zipcode', 'lat', 'long' columns for now, I'll reimport data and bypass the cell if I'd need this columns.
+
+converted 'date' column values to_datetime instead of str.
+
+after plotting correlation heatmap made noticed that 'sqft_living' and 'sqft_above' have strong correlation .88
+that tells that the living space is mostly not the the 1st floor.
+
+printed the oldest and newest houses, oldest houses was buit in 1900 and there are 87 of them in this dataset.
+also the priciest house (7_700_000.0) was build in 1910 (and renovated in 1987).
+
+got correlation as dictionary that's sorted by correlation value for more readability (easier for me to read).
+'sqft_living' parameter has the strongest correlation against 'price' (0.702) and 'grade' (0.762).
+
+also got correlation of 'condition' against 'price' and 'grade' but the correlation is weak.
+I expected correlation to be stronger.
+
+ploted 'yr_built' and 'grade', noticed that newer houses tend have better grade.
+
+remembered I did LinearRegression in university so I tied to do it for this dataset too.
+
+added values of 'sqft_lot', 'sqft_living', 'sqft_above', 'sqft_basement' to new column in dataframe.
+neither 'price' nor 'grade' are heavily affected by new sqft_total column.
+
+when plotting 'condition' against 'grade' noticed that houses with better condition have 
+better grade, which is expectable.
+
+got the chapest house with highest grade, here are its stats:
+	id			7237501190
+	date			2014-10-10 00:00:00
+	price			1780000.0
+	bedrooms		4
+	bathrooms		3.25
+	sqft_living		4890
+	sqft_lot		13402
+	floors			2.0
+	waterfront		0
+	view			0
+	condition		3
+	grade			13
+	sqft_above		4890
+	sqft_basement		0
+	yr_built		2004
+	yr_renovated		0
+	sqft_living15 		5790
+	sqft_lot15		13539
+	sqft_total		23182
+
+
+as business proposals I can suggest to look at living area (sqft_living), grade of the house, 
+the existance of more than 1 floor and number of bathrooms if the goal is money. (e.g: proposal for real estate)
+also the previous point could be uses for those who want to buy a house with higher grade at a lower price.
