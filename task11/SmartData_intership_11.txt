@@ -1,0 +1,82 @@
+### SmartData intership ###
+
+## Task nr. 11 ##
+
+Hello!! How is it going? Hope you are still as enthusiastic in the beginning!
+Today, there would be a more interesting assignment to complete because it is about a 
+case study.
+
+## Case Study ##
+
+You are a Data Scientist at a popular IT company in the Republic of Moldova. Your name is
+well known within the country and abroad day. One day, the CEO of a cardistributor company
+in Poland, wrote you to ask your help in increasing the income of its business. You found
+out that the company is preparing to aquire a new lot of cars. Analyzing the provided data,
+you should come up with a list of cars or types of cars the company shoud purchase to
+maximase its income.
+
+## Tasks for case study ##
+1. Import the Car Prices, Poland dataset as Pandas dataframe: 
+https://www.kaggle.com/datasets/aleksandrglotov/car-prices-poland
+2. Analyze the dataset
+3. Make some conclusions on the dataset.
+4. What influences car prices the most? What cars are more likely aquired by the client?
+5. Come up with a business proposal that includes the list of the cars or types of the cars
+that guarantee a greater income to the company.
+
+
+>>
+found 30085 null values in 'generation_name'
+
+deleted "Unnamed: 0" column
+
+plotted heatmap correlation between numeric values of dataFrame: 'year', 'mileage', 'vol_engine', 'price'.
+'price' is most affected by 'year' followed by 'vol_engine'
+
+added some new column when after studying 'milage' column.
+I think that there are some strange values.
+column I added are  ['age', 'miles_per_year', 'kilometers', 'kilometers_per_year']
+here are some of top milage cars:
+	ford	tourneo-connect	(2008) 		2_800_000 miles  4_506_163 km ||  2_800_000 mi per year	 321_868.80 km per year
+	ford	mondeo		(2014)		2_500_000 miles  4_023_360 km ||  2_500_000 mi per year  502_920.00 km per year
+	volkswagen	amarok	(2021)		1_000_000 miles  1_609_344 km ||  1_000_000 mi per year  1609_344.00 km per year
+	volkswagen	golf	(2018)		1_000_000 miles  1_609_344 km ||  1_000_000 mi per year  402_336.00 km per year
+	bmw	seria-3		(2005) 		999_999   miles  1_609_342 km ||  58_823.47 mi per year  94_667.20  km per year
+there are some utility car in top 10 with huge mileages but all of them are believable.
+especially volkswagen amarok 2021, 1_000_000 miles in a year, doubt it.
+7 out of top 15 are van these type of cars are more likely to have high milage because there is a high change that these cars are used for bussines and/or governamental jobs.
+the '67 ford mustang 999_999 miles 1_609_342 is more believable giving its age of 55.
+also the price on these million miles car is insane, for example the 2nd top car in this list
+ford mondeo (2014) 4_023_360 km for 23_800 (I assume euros), you could get a new one for $30k-38k
+( https://www.carsguide.com.au/ford/mondeo/price )
+
+decideed to switch to goolgle colab when plt.bar(df["age"], df['mileage']) was taking little too long to plot.
+noticed that google colab catches more isnull() values, it gets 1 for 'fuel', 'city', 'province', 'price'.
+also for 'generation_name' i get 30085 while colab says there are 6277
+
+
+business proposal:
+here are top 4 most sold car manufacturers:
+	audi          12031 units sold
+	opel          11914 units sold
+	bmw           11070 units sold
+	volkswagen    10848 units sold
+and top 4 least sold cars:
+	mitsubishi    1120 units sold
+	mini          1088 units sold
+	alfa-romeo     704 units sold
+	chevrolet      608 units sold
+
+printed out what models is the best and worst selling for every car manufacturer
+stored top 3 models for each manufacturer into a tabel. 
+data is sorted, 1st column is the best selling, last the least selling.
+
+printed the most selling car per 'city'
+# found that there is one '()' value in 'city' column and '(' for 'province'
+
+got the best selling by 'model' and 'generation_name' for each car manufacturer
+also did it for 'model' and 'fuel'
+
+also noticed that there are 'vol_engine' = 0
+when printed 'vol_engine' = 0 first results where for electric type of 'fuel'.
+so I thought that dataset didn't include kilowatts for electric cars, however there were some diesel entries.
