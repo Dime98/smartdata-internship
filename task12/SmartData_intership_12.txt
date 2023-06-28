@@ -1,0 +1,36 @@
+### SmartData intership ###
+
+## Task nr. 12 ##
+
+Hi!! So, your today's task will imply a new data science aspect that you will learn today.
+It's about feature selection, that helps you to selct only the relevant data in your
+dataset.
+
+## Resources ##
+- https://scikit-learn.org/stable/modules/feature_selection.html
+- https://towardsdatascience.com/the-5-feature-selection-algorithms-every-data-scientist-need-to-know-3a6b566efd2
+- https://www.analyticsvidhya.com/blog/2020/10/feature-selection-techniques-in-machine-learning/
+- https://www.simplilearn.com/tutorials/machine-learning-tutorial/feature-selection-in-machine-learning
+
+## Tasks for feature selection ##
+1. Import the Body performance data dataset as Pandas dataframe: 
+https://www.kaggle.com/datasets/kukuroo3/body-performance-data
+2. Using Feature Selection try the algorithms that you discovered
+3. Comment code
+4. Come up with conclusions on the analyzed data
+
+
+>>
+noticed abnormal values for 'systolic', 'diastolic' so replace outliers with columns mean().
+
+got acknowledged with feature selection and tried some algorithms.
+methods I used:
+Pearson’s correlation coefficient
+Spearman’s rank coefficient
+VarianceThreshold
+Information Gain
+Chi-square Test
+Mean Absolute Difference (MAD)
+Lasso
+Random Forest Importance
+Forward Feature Selection
