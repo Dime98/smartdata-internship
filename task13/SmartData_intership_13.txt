@@ -1,0 +1,37 @@
+### SmartData intership ###
+
+## Task nr. 13 ##
+
+Hello! Are you excited of today's task? So, today you are gonna analyze and make some 
+conclusions on the provided data! Of course, you are free to use whatever tools you want
+and perform the tasks you consider appropiriate to get a better overview on the dataset!
+
+## Tasks for dataset analysis ##
+1. Import the Chronic Kidney Disease dataset as Pandas dataframe: 
+https://www.kaggle.com/datasets/mansoordaku/ckdisease
+2. Analyze the dataset
+3. Make some preliminarily conclusions on the analyzed data
+4. Perform some modifications you consider appropiriate on the dataset
+5. Come up with some conclusions on the gained information
+6. Come up with some observations to help medical workers to identify faster the group
+of risk of people to have kidney diseases.
+
+
+>>
+after looking at data noticed some column should be labeled
+['rbc', 'pc', 'pcc', 'ba', 'htn', 'dm', 'cad', 'appet', 'pe', 'ane', 'classification'].
+before that fixed columns with '\t'.
+
+replaced all nan using SimpleImputer(strategy='mean')
+
+did LinearRegression preditction with 0.72 acurracy for test_size=.3, I get 0.82 for test_size=.1.
+highest coefficient has 'sg' column with value of 27.58 followed by 'ane': 0.1 and 'cad': 0.08.
+Although I managed to print confusion_matrix for Linear Regression but now gives an err, didn't know what I changed.
+y_pred isn't y_pred isn't binary.
+
+with LogisticRegression I get ConvergenceWarning if I go max_iter=1050.
+tried to scale data, but it did't work so just increased max_iter.
+Logistic Regression score is 0.975.
+here is confusion_matrix:
+array([[144,   5],
+       [  1,  90]], dtype=int64)
