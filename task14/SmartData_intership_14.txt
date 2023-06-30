@@ -1,0 +1,65 @@
+### SmartData intership ###
+
+## Task nr. 14 ##
+
+Hi! Today is the last day of the thire week of your intership! Taking into account that,
+as a rule clients come to you to get your business proposal for their problems, you will
+practice more on case studies.
+
+## Case Study ##
+An Avocado company owner comes to you to help him to find a way his company can enter the
+(avocado) market such that it will have a semnificative income and help him to avoid loses.
+You should come with a concrete solution for his demand.
+
+## Tasks for case study ##
+1. Import the Avocado Prices dataset as Pandas dataframe: 
+https://www.kaggle.com/datasets/neuromusic/avocado-prices
+2. Analyze the dataset
+3. Make some conclusions on the dataset.
+4. Elaborate on a solution you will present to your client. 
+
+
+>>
+deleted 'Unnamed: 0' column
+rearanged columns so that 'Total Volume' and 'AveragePrice' would be at the end.
+
+added new column 'Profit' that contains product of 'Total Volume' * 'AveragePrice'.
+
+converted data to datetime and printed heat correlation map.
+preliminary observations 'Total Volume' has the strongest correlation with:
+'PLU_4046'	: 0.97
+'PLU_4225'	: 0.97
+'Total Bags'	: 0.96
+'PLU_4770'	: 0.87
+and the strongest correlation with new column 'Profit' is:
+'Total Bags' 	: 0.96
+'PLU_4225' 	: 0.95
+'PLU_4046' 	: 0.95
+'PLU_4770' 	: 0.83
+
+grouped data by reqion and printed top and bottom seller regions.
+top 5 selling regions:
+	California      1.121414e+09
+	West            1.066834e+09
+	Northeast       9.600079e+08
+	SouthCentral    8.740593e+08
+	Southeast       7.036306e+08
+top 5 low selling regions:
+	Syracuse      	1.520519e+07
+	Boise         	1.534667e+07
+	Spokane       	1.715649e+07
+	Louisville    	1.749555e+07
+	Albany        	2.176672e+07
+the top 1 best selling is 'TotalUS' so I ommited that.
+
+made some plots with data grouped by year.
+plots show that total volume is constanly growing except for year 2018,
+I think it's because there data for only 3 months, all other years hava data for the whole year
+wanted to plot difference between conventional and organic but is [1, 0, 2, 0] for years 2015-2018.
+
+
+printed out how many unique values each column has.
+'type' has 2 and 'year' 4, will leave 'year' as is but change 'type' to labeled (0/1).
+also 'region' will also be label encoded.
+
+deleted 'Small Bags', 'Large Bags', 'XLarge Bags' as there already is 'Total Bags' column.
