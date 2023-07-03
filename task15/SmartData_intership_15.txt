@@ -1,0 +1,77 @@
+### SmartData intership ###
+
+## Task nr. 15 ##
+
+Hello! hope you had a lovely weekend! Now it's time to come back to our stuff and analyze some
+more datasets. Today, once again, you'll have to deal with a case study.
+
+## Case Study ##
+Your client has liked puppies and dogs since his childhood. Also, recently he has moved to a
+German city, Zurich, where is planning to stay for quite a while. He wanted to start a small
+business that includes his love for dogs. Analyzing the current sitution with dogs in the city,
+come up with ideas what types of dogs should your client sell to have positive income from the
+business.
+
+## Tasks for case study ##
+1. Import the Dogs of Zurich dataset as Pandas dataframe: 
+https://www.kaggle.com/datasets/kmader/dogs-of-zurich
+2. Analyze the dataset
+3. Make some initial conclusions on the dataset
+4. Elaborate on a business solution you will present to your client (as a step-by-step guide
+with concrete actions)
+5. Defend your solution
+
+
+>>
+droped 'RASSE2_MISCHLING' columns because it only contains nan's.
+
+renamed columns to English.
+
+column 'RASSE1_MISCHLING' contains 618 'Mischling' values the rest values are NaNs.
+did it to get the 'Primary Breed' and 'Secondary Breed' for each mixed dog but there's no value for 'Secondary Breed'.
+
+plotted gender of dogs and owner, for owners there are significantly more women than men, (men are less than half of women)on the other hand, for dogs distibuition is pretty even 3608 females and 3547 males.
+
+added new columns to have the average age of the owner as an int
+
+plotted out the most dog breeds in dataset:
+Mischling klein           620
+Chihuahua                 516
+Labrador Retriever        439
+Yorkshire Terrier         298
+Jack Russel Terrier       290
+all dogs breed from top 5 except Labrador Retriever are small dogs.
+
+grouped man and women and printed top and bottom 5 breeds for both gender
+here are results (top/bottom 3):
+for women:
+	top 			bottom
+	Terrier                	Foxterrier    
+	Schäfer                	Rhodesian Ridgeback
+	Jack Russel Terrier    	Pomeranian
+for men:
+	top			bottom
+	Labrador Retriever     	Primary Breed
+	Schäfer                	Leonberger
+	Terrier                	Setter
+	
+printed out the data of the oldest dogs born in 1996 and 1997.
+
+plotted breed type distribution, the most common type is:
+K     4505
+I     2632
+II      18
+
+plotted number of dogs per district, the most dogs are in district nr. 11
+district nr. 11.0    1198 dogs
+district nr. 7.0     1009 dogs
+district nr. 9.0      855 dogs
+
+printed most and least common breeds per district and made a dataFrame with top breeds per district.
+
+for client I'd suggest to sell dogs that are in high demand in areas with low number of these dogs around.
+I cannot make assuption on supply demand / supply of dogs based on the data, and my limited knowledge of economics.
+there are a lot of factor that contibute to low/high price.
+if there is supply in excess sellers might lower the price to attract new buyers.
+perhaps the cliend should make a dog related bussines in district with highest number of dogs,
+for example: grooming bussines, traning center or dog caffee.
