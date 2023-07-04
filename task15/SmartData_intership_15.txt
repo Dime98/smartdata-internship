@@ -75,3 +75,18 @@ there are a lot of factor that contibute to low/high price.
 if there is supply in excess sellers might lower the price to attract new buyers.
 perhaps the cliend should make a dog related bussines in district with highest number of dogs,
 for example: grooming bussines, traning center or dog caffee.
+
+==================================
+in 'bussiness.txt' is a short list of 24 dog related bussiness I found in Zürich, Switzerland.
+
+made a csv with bussiness and what services they offer.
+
+plotted numbers of services, the most offered if 'Dog Care / Dogsitting' with 19 businesses that offer it
+'Grooming' and 'Training' are on 2nd and 3rd place, 7 businesses offering both services.
+
+I think that it would ok for the client to offer one or more of previously mentioned services in district nr. 11, 7, 9 where more dogs are found (in dataset).
+also Dog Care is the best solution since it doesn't require a lot of prerequisites,
+food can be given by the owner if the dog has specific preferences, also medicine should be also provided by the owner.
+'Grooming' requires equipment and knowledge of dog's breed coating
+'Training' requires extensive knowledge and pacience since thare are breed that harder to train,
+Rottweilers, Pit Bull Terriers, Siberian Huskies are harder to train, and all these dogs are in dataset.
