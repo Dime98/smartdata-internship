@@ -90,3 +90,12 @@ food can be given by the owner if the dog has specific preferences, also medicin
 'Grooming' requires equipment and knowledge of dog's breed coating
 'Training' requires extensive knowledge and pacience since thare are breed that harder to train,
 Rottweilers, Pit Bull Terriers, Siberian Huskies are harder to train, and all these dogs are in dataset.
+
+==================================
+I got prices of top 20 most common dog breeds and least common 10.
+added number of dogs breed (to simulate demand).
+
+sorted values by 'nr_of_dogs' and 'mean_price',
+simulating dogs that are in high demand and at a lower price
+since I cannot tell if the high nr of certain dog breed depicts high demand or oversupply,
+I printed less common dog breeds at the lower price
