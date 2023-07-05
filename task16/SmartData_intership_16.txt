@@ -1,0 +1,27 @@
+### SmartData intership ###
+
+## Task nr. 16 ##
+
+Hii!! How's it going? Today we will start an interesting topic: introduction into some basic ML
+algorithms that will help you (I hope) to analyze data in the future. Today's topic is Linear
+Regression.
+
+## Resources ##
+- https://analyticsindiamag.com/beginners-guide-to-linear-regression-in-python/#:~:text=The%20Math%20behind%20Linear%20Regression,this%20is%20called%20linear%20regression.
+- https://towardsdatascience.com/linear-regression-detailed-view-ea73175f6e86
+- https://www.analyticsvidhya.com/blog/2021/10/everything-you-need-to-know-about-linear-regression/
+- https://www.ibm.com/topics/linear-regression#:~:text=Resources-,What%20is%20linear%20regression%3F,is%20called%20the%20independent%20variable.
+
+## Tasks for Linear Regression ##
+1. Import the Used Car Data dataset as Pandas dataframe: 
+https://www.kaggle.com/datasets/sanjeetsinghnaik/used-car-information
+2. Analyze the dataset and determine the target column
+3. Study the correlation between features and find the features subset 
+with the highest correlation with the target column absolute correlation (between 0.5 and 0.8)
+4. Split the data into 2 sub-sets using the train_test_split function from sklearn
+5. Train a sklearn Linear Regression model on the data with selected columns (train subset).
+6. Test the model 
+7. Come up with some conclusions on the obtained accuracy. How can it be improved or what can 
+you change in the chosen approach such that running the algorithm you obtain a better accuracy?
+P.S. Don't forget to comment the code
+
