@@ -1,0 +1,50 @@
+### SmartData intership ###
+
+## Task nr. 17 ##
+
+Hello! How do you feel about Machine Learning so far? I hope you had fun exploring Linear
+Regression! Today you will move to another interesting concept, called logistic regression.
+
+## Resources ##
+https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc
+https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+https://aws.amazon.com/what-is/logistic-regression/?nc1=h_ls
+https://www.statisticssolutions.com/free-resources/directory-of-statistical-analyses/what-is-logistic-regression/
+https://www.spiceworks.com/tech/artificial-intelligence/articles/what-is-logistic-regression/
+
+## Tasks for Logistic Regression ##
+1. Import the Telco Customer Churn dataset as Pandas dataframe: 
+https://www.kaggle.com/datasets/blastchar/telco-customer-churn
+2. Analyze the dataset and determine the target column
+3. If your classes are expressed as non-numerical features map 
+them out to numbers, for example, 0, 1, 2, etc (label them)
+4. Study the correlation between features and find the features subset with the highest 
+correlation with the target column absolute correlation (between 0.5 and 0.8) 
+5. Split the data into 2 sub-sets using the train_test_split function from sklearn
+6. Train a sklearn Logistic Regression model on the data with selected columns (train subset).
+7. Test the model 
+8. Come up with some conclusions on the obtained accuracy. How can it be improved or what can 
+you change in the chosen approach such that running the algorithm you obtain a better accuracy?
+P.S. Don't forget to comment the code
+
+
+>>
+data has mostly low variance variables and has no nulls nor duplicates, so no much preprocessing is done.
+
+deleted 'customerID' for input feature.
+
+did LogisticRegression() 2 times, 1st time for StandardScaler() and played around with LogisticRegression arguments,
+2nd time is just raw data.
+predicting with scaled data and more arguments gives better scores:
+	score on test  0.80301685891748
+	score on train 0.8053977272727273
+for raw data:
+	score on test  0.7975155279503106
+	score on train 0.7990056818181818
+
+confusion_matrix for scaled + args is also better
+	array([[ 107,    4],
+	       [4015, 1509]], dtype=int64)
+for raw data:
+	array([[3659,  678],
+	       [ 463,  835]], dtype=int64)
