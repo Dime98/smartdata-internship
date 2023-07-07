@@ -48,3 +48,14 @@ confusion_matrix for scaled + args is also better
 for raw data:
 	array([[3659,  678],
 	       [ 463,  835]], dtype=int64)
+
+made a dataframe with coefficients.
+columns with higher coefficient leads to target column to have positive value.
+lower coeff does the opposite, target column to have negative value
+top 5 most positive coefficients:
+	PaperlessBilling	0.49
+	SeniorCitizen		0.17
+	StreamingMovies		0.13
+	Partner			0.10
+	MultipleLines		0.08
+these would lead customers not to leave within a month.
