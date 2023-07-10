@@ -25,3 +25,23 @@ with the highest correlation with the target column absolute correlation (betwee
 you change in the chosen approach such that running the algorithm you obtain a better accuracy?
 P.S. Don't forget to comment the code
 
+======================
+
+I dit df.nunique() to get columns with less unique values so that it would be easier to classify (and that would make sense).
+brand_rank                   29
+distance below 30k km         2
+new and less used             2
+
+for 'brand_rank' .fit() gives higher accuracy if data is scaled.
+also tried with different args for LogisticRegression() but accuracy was the same.
+
+for 'new and less used' / 'distance below 30k km' I got the correletaion between these 2,
+they have strong positive correlation of 0.8468475041578979 so I choose 'new and less used' as traget.
+LogisticRegression().score = 0.9752650176678446 (column 'distance_travelled(kms)' included).
+0.8280329799764429 without 'distance_travelled(kms)' feature.
+printed confusion_matrix which looks really good (column 'distance_travelled(kms)' included).
+array([[704,   1],
+       [  1, 143]], dtype=int64)
+'distance_travelled(kms)' excluded.
+array([[694, 138],
+       [  8,   9]], dtype=int64)
