@@ -45,3 +45,4 @@ array([[704,   1],
 'distance_travelled(kms)' excluded.
 array([[694, 138],
        [  8,   9]], dtype=int64)
+LogisticRegression().score is 0.8468475041578979 after dealing with outliers
