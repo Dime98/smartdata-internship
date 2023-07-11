@@ -1,0 +1,83 @@
+### SmartData intership ###
+
+## Task nr. 18 ##
+
+Hello!! Hope you are pretty pleased with your first month of being in our company!
+So, on today's menu is learning how to deal with datetime data! As in previous weeks, you will be 
+working on the given dataset (a bit of business analysis included, as well).
+
+## Resources ##
+https://towardsdatascience.com/machine-learning-with-datetime-feature-engineering-predicting-healthcare-appointment-no-shows-5e4ca3a85f96
+https://sakaggi.medium.com/11-data-engineering-transform-data-parsing-dates-etl-pipeline-de701699bdc2
+https://blog.devgenius.io/r-for-haters-how-to-convert-date-format-50583214e1c8
+https://www.analyticsvidhya.com/blog/2020/05/datetime-variables-python-pandas/
+https://betterdatascience.com/cyclical-data-machine-learning/
+
+## Tasks for Datetime columns encoding ##
+1. Import the Data Science and STEM Salaries dataset as Pandas dataframe: 
+https://www.kaggle.com/datasets/jackogozaly/data-science-and-stem-salaries
+2. Analyze the dataset and determine the target column
+3. If your columns are expressed as DateTime data type, deal with them using the proposed
+resources or others on your choice
+4. If your classes are expressed as non-numerical features map 
+them out to numbers, for example, 0, 1, 2, etc (label them)
+5. Make some initial conclusions on the dataset
+6. Elaborate on a business solution you will present to your client (as a step-by-step guide
+with concrete actions)
+7. Defend your solution
+P.S. Don't forget to comment the code
+
+
+>>
+converted 'timestamp' to_datetime.
+and made a column to have year only
+
+rename and rearange columns, no practical use just personal preference.
+
+checked for nulls, lot of nulls found:
+	company 	5 nulls
+	level 		123 nulls
+	tag 		870 nulls
+	gender 		19540 nulls
+	other_details 	22508 nulls
+	dma_id 		2 nulls
+	Race 		40215 nulls
+	Education 	32272 nulls
+looked for columns and rows with all nulls, didn't find any.
+
+also no duplicates in dataframe.
+
+plotted heatmap, highest correlation is among 'stock_grant_value', 'bonus', 'base_salary', 'total_yearly_compensation'.
+
+filled nans with 'unk' for string columns and mean() for numeric column.
+
+mapped non numeric columns.
+['company', 'level', 'title', 'location', 'tag', 'gender', 'other_details', 'Race', 'Education']
+
+got sorted correlation for 'total_yearly_compensation',
+	here are top results:
+		'stock_grant_value' 	0.770
+		'base_salary' 		0.672
+		'bonus' 		0.489
+		'years_of_experience' 	0.422
+		'dma_id' 		0.376
+		'location' 		0.196
+		'years_at_company' 	0.165
+		'Education' 		0.114
+		'Race' 			0.097
+got sorted correlation of 'total_yearly_compensation' and 'bonus' but excluded all the salary related columns
+	here are top results for 'bonus' as target:
+		'years_of_experience' 	0.261
+		'dma_id' 		0.143
+		'years_at_company' 	0.108
+		'Doctorate_Degree' 	0.071
+		'location' 		0.066
+		'Education' 		0.031
+		'Masters_Degree' 	0.031
+		'Race' 			0.026
+		'gender' 		0.019
+		'title' 		0.018
+
+grouped data by year and plotted average yearly compensation, bonus and years at company for each year in dataset.
+
+did linear regression on data
