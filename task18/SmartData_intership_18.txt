@@ -81,3 +81,21 @@ got sorted correlation of 'total_yearly_compensation' and 'bonus' but excluded a
 grouped data by year and plotted average yearly compensation, bonus and years at company for each year in dataset.
 
 did linear regression on data
+
+=============================
+
+noticed that 'company' column has 2 variation of same company name E.g.:("apple": "Apple", "Microsoft": "microsoft", ect) 
+replace columns having same company name E.g.:("apple" with "Apple") 
+
+took 'years_at_company' as target column to make business proposal.
+'years_at_company' would be a good feature companies, 
+
+here is correlation for 'years_at_company' 
+'years_of_experience': 		0.522
+'total_yearly_compensation': 	0.165
+'base_salary': 			0.145
+'bonus': 			0.108
+'stock_grant_value': 		0.089
+'Race_White': 			0.047
+'dma_id': 			0.043
+'other_details': 		0.042
